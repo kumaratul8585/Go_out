@@ -1,18 +1,19 @@
+
 const steps = [
     {
         text: "Hey lazy lad, can I ask you something?",
         gif: "1.gif"
     },
     {
-        text: "Are you free tomorrow evening? 🥺",
+        text: "Are you free tomorrow evening? \uD83E\uDD7A", 
         gif: "3.gif"
     },
     {
-        text: "Can we go out tomorrow? " Food is on me! 🍔",
+        text: "Can we go out tommorow ? Food is on me! \uD83C\uDF54", 
         gif: "6.gif"
     },
     {
-        text: "Please? I promise I won't be annoying... much. 👉👈",
+        text: "Please? I promise I won't be annoying... much. \uD83D\uDC49\uD83D\uDC48", 
         gif: "3.gif" 
     }
 ];
@@ -20,13 +21,14 @@ const steps = [
 const weepingGif = "2.webp";
 const successGif = "7.gif";
 
+
 const noTexts = [
-    "Please aisa mat karo 🥺",
-    "Dil toot jayega mera 💔",
+    "Please aisa mat karo \uD83E\uDD7A",      // 🥺
+    "Dil toot jayega mera \uD83D\uDC94",      // 💔
     "Maan jao na Nuiii...",
-    "Hm hm Cse ka hun n isliye? 😒",
+    "Hm hm Cse ka hun n isliye? \uD83D\uDE12",// 😒
     "Ek baar aur soch lo!",
-    "Are you sure? 😤"
+    "Are you sure? \uD83D\uDE24"              // 😤
 ];
 
 let currentStep = 0;
@@ -44,6 +46,7 @@ function typeWriter(text, i = 0) {
     }
 }
 
+// Initial Start
 typeWriter(steps[0].text);
 gifElement.src = steps[0].gif; 
 
@@ -112,11 +115,12 @@ function resetButtons() {
 }
 
 function showSuccess() {
+    // Unicode used here for Heart: \u2764\uFE0F
     document.querySelector(".card").innerHTML = `
         <div class="gif-area">
             <img src="${successGif}" style="height:180px; border-radius:20px;">
         </div>
-        <h1>Hehe I knew it u will be ready nui? ❤️</h1>
+        <h1>Hehe I knew it u will be ready nui... \u2764\uFE0F</h1>
         <p style="color:#666; margin-top:15px; margin-bottom: 25px;">See you tomorrow!</p>
         
         <div class="btn-container">
@@ -150,5 +154,4 @@ function showSuccess() {
             requestAnimationFrame(frame);
         }
     }());
-
 }
