@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanging</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="floating-container">
+        <div class="floater">🍔</div>
+        <div class="floater">🥺</div>
+        <div class="floater">✨</div>
+        <div class="floater">💖</div>
+        <div class="floater">😺</div>
+    </div>
+
+    <div class="card">
+        <div class="gif-area">
+            <img id="main-gif" src="https://media1.tenor.com/m/N2s4V4a5kYwAAAAC/mochi-peach-cat-mochi-cat.gif" alt="Cute Gif">
+        </div>
+
+        <div class="text-area">
+            <h1 id="question-text">Hey lazy lad, can I ask you something?</h1>
+        </div>
+
+        <div class="btn-container">
+            <button id="yes-btn" onclick="handleYes()">Yes</button>
+            
+            <button id="no-btn" 
+                onmouseover="handleNoInteraction()" 
+                ontouchstart="handleNoInteraction()" 
+                onclick="handleNoClick()">
+                No
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Floating Background */
+.floating-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.floater {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.6;
+    animation: floatUp 15s linear infinite;
+    bottom: -50px;
+}
+
+.floater:nth-child(1) { left: 10%; animation-duration: 12s; }
+.floater:nth-child(2) { left: 30%; animation-duration: 18s; animation-delay: 2s; }
+.floater:nth-child(3) { left: 70%; animation-duration: 10s; }
+.floater:nth-child(4) { left: 50%; animation-duration: 15s; animation-delay: 5s; }
+.floater:nth-child(5) { left: 90%; animation-duration: 13s; animation-delay: 1s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.card {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    padding: 40px 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 420px;
+}
+
+.gif-area img {
+    height: 180px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.text-area {
+    min-height: 90px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #444;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 60px;
+    position: relative; /* Important for button positioning */
+}
+
+button {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 800;
+    transition: transform 0.2s ease, background 0.2s; /* Faster transition */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#yes-btn {
+    background: #2196F3;
+    color: white;
+    z-index: 20; /* Ensure Yes button stays on top of text if it gets huge */
+}
+
+#no-btn {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+    100% { transform: translateX(0); }
+}
