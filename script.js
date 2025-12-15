@@ -1,24 +1,24 @@
 const steps = [
     {
         text: "Hey lazy lad, can I ask you something?",
-        gif: "gif/1.gif"
+        gif: "1.gif"
     },
     {
         text: "Are you free tomorrow evening? 🥺",
-        gif: "gif/3.gif"
+        gif: "3.gif"
     },
     {
-        text: "Can we go out tommorow. Food is on me! 🍔",
-        gif: "gif/6.gif"
+        text: "Can we go out tomorrow? " Food is on me! 🍔",
+        gif: "6.gif"
     },
     {
         text: "Please? I promise I won't be annoying... much. 👉👈",
-        gif: "gif/3.gif" 
+        gif: "3.gif" 
     }
 ];
 
-const weepingGif = "gif/2.webp";
-const successGif = "gif/7.gif";
+const weepingGif = "2.webp";
+const successGif = "7.gif";
 
 const noTexts = [
     "Please aisa mat karo 🥺",
@@ -150,4 +150,5 @@ function showSuccess() {
             requestAnimationFrame(frame);
         }
     }());
+
 }
